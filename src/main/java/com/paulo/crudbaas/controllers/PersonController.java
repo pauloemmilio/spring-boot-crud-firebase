@@ -1,16 +1,15 @@
 package com.paulo.crudbaas.controllers;
 
-import java.util.concurrent.ExecutionException;
-
 import com.google.gson.Gson;
 import com.paulo.crudbaas.PersonNotFoundException;
+import com.paulo.crudbaas.entities.Person;
+import com.paulo.crudbaas.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.paulo.crudbaas.entities.Person;
-import com.paulo.crudbaas.services.PersonService;
+import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/persons")

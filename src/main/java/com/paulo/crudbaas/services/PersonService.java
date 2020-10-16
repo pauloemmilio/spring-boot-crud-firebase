@@ -21,7 +21,7 @@ public class PersonService {
     }
 
     public void save(Person person) throws InterruptedException, ExecutionException {
-        getPersonsCollection().document().set(person);
+        getPersonsCollection().document(person.getName()).set(person);
     }
 
     public Person getOne(String name) throws InterruptedException, ExecutionException, PersonNotFoundException {
